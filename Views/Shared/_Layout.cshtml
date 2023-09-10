@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <title>@ViewBag.Title - Meeting App</title>
+</head>
+<body>
+    <div class="bg-primary text-white p-2 text-center"> <!--mavi zemin - yazılar beyaz- padding- içerik ortalansın-->
+        MeetingApp
+    </div>
+    <div class="container mt-3"> <!-- içerik ortalansın köşelerde- üstten biraz boşluk bırakılsın- -->
+        <div class="row">
+            <div class="col-lg-6 mx-auto"> <!--12 lik kolonun 6 sını kullanıcaz- bu 6 da ortalansın - içerikleri de ortalayalım -->
+                <div class="card"> <!--köşelerden borderları olan bir kart olsun-->
+                    <div class="card-body">  <!-- borderlardan içeriye doğru biraz padding e sahip olsun-->
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </body>
+</html>

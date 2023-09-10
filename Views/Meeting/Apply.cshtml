@@ -1,0 +1,29 @@
+@model UserInfo
+@{
+    ViewBag.Title = "Participants";
+}
+<h1 class="h4 text-center" >Attendance List </h1>
+<form Method = "post" action="/Meeting/Apply" novalidate>
+    <div asp-validation-summary="All" ></div>
+    <div class="mb-3"> <!--marjin bottom yazdık ki her eleman arasına boşluk bıraksın-->
+        <label asp-for="Name" class="form-label">Name</label> <!-- for da label ile inputun ilgili olduğunu gösteriyor-->
+        <input asp-for="Name" class="form-control" > <!--client tarafındaki tarayıcısıyla ilgili olarak id gerekli-->
+    </div>
+    <div class="mb-3"> <!--marjin bottom yazdık ki her eleman arasına boşluk bıraksın-->
+        <label asp-for="Phone" class="form-label">Phone</label> <!-- for da label ile inputun ilgili olduğunu gösteriyor-->
+        <input asp-for="Phone" class="form-control" > <!--client tarafındaki tarayıcısıyla ilgili olarak id gerekli-->
+    </div>
+    <div class="mb-3"> <!--marjin bottom yazdık ki her eleman arasına boşluk bıraksın-->
+        <label asp-for="Email" class="form-label">Email</label> <!-- for da label ile inputun ilgili olduğunu gösteriyor-->
+        <input asp-for="Email" class="form-control" > <!--client tarafındaki tarayıcısıyla ilgili olarak id gerekli-->
+    </div>
+    <div class="mb-3"> <!--marjin bottom yazdık ki her eleman arasına boşluk bıraksın-->
+        <label asp-for="WillYouAttend" class="form-label">Will You Attend?</label> <!-- for da label ile inputun ilgili olduğunu gösteriyor-->
+        <select asp-for="WillYouAttend" class="form-select">
+            <option value="">Choose</option>
+            <option value="true"> Yes, I will</option>
+            <option value="false"> No, I will not</option>
+        </select>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit!</button>
+</form>
